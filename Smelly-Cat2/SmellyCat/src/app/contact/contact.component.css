@@ -1,0 +1,46 @@
+input, textarea, label{
+    font-size: 12px;
+}
+input{
+    min-width: 50px;
+}
+/* Gradient color1 - color2 - color1 */
+hr.style-one {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+.gmap_canvas {
+    padding-top: 55px;
+    max-width: 800px;
+    min-width: 300px;
+}
+.frame::before{
+    content: "";
+    margin-top: 100%;
+}
+.frame{
+    display: flex; 
+    align-items: center;
+    float: left;
+    height: 300px;
+
+}
+.details h1{
+    font-size: 16px;
+    font-weight: bold;
+    text-align: right;
+    padding: 0px;
+}
+.details p{
+    font-size: 12px;
+    text-align: right;
+    padding: 0px;
+    margin: 0px;
+}
+.is-invalid{
+    font-size: 10px;
+    color: red;
+    font-weight:lighter;
+}

@@ -1,0 +1,26 @@
+<footer class="grid-list text-center">
+  <div class="row firstrow">
+    <div class="firstrowcontainer d-flex justify-content-around align-items-center">
+      <div class="col-3 tire logo">
+        <img src="assets/logo_white.png" alt="Logo_w">
+      </div>
+      <div class="col-6 tire links">
+        <a routerLink="/Privacy-Policy">Privacy Policy</a>
+        <a role="button" (click)="openDialog()" class="buttonlink">Terms & Conditions</a>
+        <a routerLink="/Blog">Blog</a>
+        <a routerLink="/Support">Support</a>
+      </div>
+      <div class="col-3 tire socials">
+        <a href="https://discord.com/"><fa-icon [icon]="faDiscord"></fa-icon></a>
+        <a href="https://twitter.com/"><fa-icon [icon]="faTwitter"></fa-icon></a>
+        <a href="https://www.instagram.com/"><fa-icon [icon]="faInstagram"></fa-icon></a>
+      </div>
+    </div>
+  </div>
+  <div class="row copyright">
+    <div class="col-sm-12">
+      <p>Copyright &copy; SmellyCat 2020</p>
+    </div>
+  </div>
+</footer>
+

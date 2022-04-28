@@ -1,0 +1,26 @@
+<mat-toolbar class="mat-elevation-z1">
+    <div class="space">
+        &nbsp; &nbsp; &nbsp;
+    </div>
+    
+    <div class="logo_b">
+        <img src="assets/logo_black.png" alt="Logo_b">
+    </div>
+
+    <span class="spacer"></span>
+
+    <div class="navigation-items" fxHide.xs="true">
+        <span><a mat-button routerLink="/Adopt-Kittens">Adopt Kittens</a></span>
+        <span><a mat-button routerLink="/Kitty-Stories">Kitty Stories</a></span>
+        <span><a mat-button routerLink="/About-Us">About Us</a></span>
+        <span><a mat-button routerLink="/Blog">Blog</a></span>
+        <span><a mat-button routerLink="/Contact">Contact</a></span>
+    </div>
+    
+    <div fxHide.gt-xs="true">
+        <button mat-icon-button (click)="onToggleSidenav()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+</mat-toolbar>
+

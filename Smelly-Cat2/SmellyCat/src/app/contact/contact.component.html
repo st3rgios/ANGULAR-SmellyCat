@@ -1,0 +1,167 @@
+<div class="container" margins="0px" padding="0px">
+  <div class="row pt-5 pb-5 mb-5">
+    <div class="col">
+      <p class="h2 mb-4" style="font-weight: bold">Contact us</p>
+      <p class="mb-4 text-justify">We are all cat persons, so if you got any question, drop it below and we will contact you back!</p>
+
+      <!-- Default form contact -->
+      <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        
+        <!-- Name -->
+        <div class="d-flex form-row">
+          <label class="p-2 align-self-center col-sm-4 col-3">Your&nbsp;Full&nbsp;Name</label>
+          <div class="p-2 col-sm-8 col-9">
+            <input 
+              mdbInput 
+              type="name" 
+              formControlName="name" 
+              class="form-control" 
+              id="id_name"
+              placeholder="Type your name">
+            <div *ngIf="myForm.get('name')?.invalid && (myForm.get('name')?.dirty || myForm.get('name')?.touched)" class="is-invalid">
+              Please provide a name.
+            </div>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="d-flex form-row">
+          <label class="p-2 align-self-center col-sm-4 col-3">Your&nbsp;Email</label>
+          <div class="p-2 col-sm-8 col-9">
+            <input 
+              mdbInput 
+              type="email" 
+              formControlName="email" 
+              class="form-control mt-2" 
+              id="id_email"
+              placeholder="Type your email">
+            <div *ngIf="myForm.get('email')?.invalid && (myForm.get('email')?.dirty || myForm.get('email')?.touched)" class="is-invalid">
+              Please provide a valid email address.
+            </div>
+          </div>
+        </div>
+
+        <!------------------------------>
+        <hr class="style-one mb-3">
+
+        <div class="row">
+          <div class="col">
+
+            <!-- City -->
+            <div>
+              <label>City</label>
+              <input 
+                type="city" 
+                formControlName="city" 
+                id="id_city" 
+                mdbInput 
+                class="form-control mb-4"
+                placeholder="ex. Thessaloniki">
+            </div>
+          </div>
+          <div class="col">
+
+            <!-- Postal Code -->
+            <div>
+              <label>Postal Code</label>
+              <input 
+                type="postalcode" 
+                formControlName="postalcode" 
+                id="id_postalcode" 
+                mdbInput
+                class="form-control mb-4" 
+                placeholder="ex. 54658">
+            </div>
+          </div>
+        </div>
+
+        <!-- Address -->
+        <div>
+          <label>Address</label>
+          <input 
+            type="address" 
+            formControlName="address" 
+            id="id_address" 
+            mdbInput 
+            class="form-control mb-4"
+            placeholder="ex. Thessaloniki">
+        </div>
+
+        <!-- Message -->
+        <div class="form-row">
+          <label>Your Message</label>
+          <textarea 
+            formControlName="message" 
+            class="form-control" 
+            mdbInput 
+            id="id_message" 
+            rows="4"
+            placeholder="Type your message">
+          </textarea>
+          <div
+            *ngIf="myForm.get('message')?.invalid && (myForm.get('message')?.dirty || myForm.get('message')?.touched)" class="is-invalid">
+            Messages must be at least 1 character long.
+          </div>
+        </div>
+
+        <!-- Terms -->
+        <div class="form-terms">
+          <mat-checkbox 
+            formControlName="acceptTerms" 
+            [checked]="false" 
+            id="id_acceptTerms" 
+            style="font-size: 12px" 
+            class="mt-4">
+            I agree with the
+          </mat-checkbox>
+          <a role="button" (click)="openDialog()" style="color:blue ; font-size: 12px"> Terms & Conditions</a>
+          <div *ngIf="myForm.get('acceptTerms')?.invalid" class="invalid-feedback">
+            Accept Ts & Cs is required</div>
+        </div>
+
+        <!-- Send button -->
+        <button 
+          mat-raised-button 
+          matTooltip="Please fill the required fields and agree with the Terms & Conditions" 
+          color="accent" 
+          type="submit" 
+          class="mt-4"
+          [disabled]="myForm.invalid">
+          Send!
+        </button>
+      </form>
+    </div>
+    <div class="col">
+      <div class="">
+        <div class="container">
+          <div class="mapouter">
+            <div class="gmap_canvas">
+              <iframe 
+                width="100%" 
+                height="100%" 
+                id="gmap_canvas" 
+                frameborder="0" 
+                scrolling="no" 
+                marginheight="0"
+                marginwidth="0" 
+                style="border:1px dotted black" 
+                class="frame"
+                src="https://maps.google.com/maps?q=Αριστοτέλους+16,+Θεσσαλονίκη+546+23&t=&z=13&ie=UTF8&iwloc=&output=embed">
+              </iframe>
+            </div>
+          </div>
+          <div class="container-details" padding-bottom="100px">
+            <div class="details">
+              <h1>Headquartes</h1>
+              <p>Aristotelous 16, 54658</p>
+              <p>Thessaloniki, Greece</p>
+              <p>&nbsp;</p>
+              <p>+30 231 129 0998</p>
+              <p>hey@smellycat.gr</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
